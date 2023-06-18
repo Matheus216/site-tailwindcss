@@ -6,10 +6,10 @@ export default function Home() {
         <div className='relative ps-40 pe-40'>
           <Navbar />
         </div>
-       <h1 className="text-3xl font-mono text-center text-slate-300">
+       <h1 className="text-3xl font-mono text-center text-slate-300 mt-20">
           Welcome
         </h1>
-        <div className="text-2xl font-mono text-center text-slate-300 m-10">
+        <div className="text-2xl font-mono text-center text-slate-300 m-10 bg-[#1a3c59a3] rounded-md">
           become your best version
         </div>
       </div>
