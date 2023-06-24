@@ -11,14 +11,16 @@ import {
 import { useState } from 'react'
 
 export default function Navbar() {
-    const [small, setSmall] = useState('m-0')
+    const [small, setSmall] = useState('w-0 hidden')
     
-    function expandNavbar() {
+    function expandNavbar(e: any) {
         console.log('Open')
-        if (small == '')
-          setSmall('m-100')
+        if (small.includes('w-0'))
+          setSmall('w-[20%] gap-50')
         else 
-          setSmall('m-0')
+          setSmall('w-0  hidden')
+
+        e.preventDefault()
       }
 
     return (
@@ -27,17 +29,18 @@ export default function Navbar() {
           <div className="md:hidden lg:hidden block text-2xl" >TDWC</div>
           <div className="hidden md:block lg:block">Texas dev web creative</div>
         </div>
-        <ul className={`md:flex lg:flex md:w-[30%] lg:w-[30%] justify-between items-center gap-10 ${small} hidden sm:flex-col md:flex-row`}>
+        <ul className={`md:flex lg:flex md:w-[30%] lg:w-[30%] justify-between items-center  ${small} sm:flex-col md:flex-row`}>
           <ItemNav description='hero' href='#' icon={faHouse} />
           <ItemNav description='about' href='#' icon ={faBook}/>
           <ItemNav description='Services' href='#' icon={faBuilding} />
           <ItemNav description='Contact' href='#' icon={faPhone} />
         </ul>
         <div className='w-[20%] text-slate-300 text-center'>
-          <div className='cursor-pointer hidden md:block lg:block'>Get started</div>
-          <i className=' md:hidden lg:hidden'><a href='#' onClick={expandNavbar}><FontAwesomeIcon className='h-6' icon={faBars} /></a></i>
+          <button className='bg-orange-500 text-slate-800 rounded p-3 cursor-pointer hidden md:block lg:block hover:p-4 transition-all delay-75'>
+            Get started
+          </button>
+          <i className=' md:hidden lg:hidden'><a href='#' onClick={e => expandNavbar(e)}><FontAwesomeIcon className='h-6' icon={faBars} /></a></i>
         </div>
-
       </div>
     )
   }
