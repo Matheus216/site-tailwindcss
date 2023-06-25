@@ -36,7 +36,7 @@ export default function Navbar() {
           <ItemNav description='Contact' href='#' icon={faPhone} />
         </ul>
         <div className='w-[20%] text-slate-300 text-center'>
-          <button className='bg-orange-500 text-slate-800 rounded p-3 cursor-pointer hidden md:block lg:block hover:p-4 transition-all delay-75'>
+          <button className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-orange-800 duration-300 bg-orange-500 text-white font-bold rounded p-3 cursor-pointer hidden md:block lg:block'>
             Get started
           </button>
           <i className=' md:hidden lg:hidden'><a href='#' onClick={e => expandNavbar(e)}><FontAwesomeIcon className='h-6' icon={faBars} /></a></i>
