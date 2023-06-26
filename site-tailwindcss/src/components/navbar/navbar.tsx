@@ -16,20 +16,20 @@ export default function Navbar() {
     function expandNavbar(e: any) {
         console.log('Open')
         if (small.includes('w-0'))
-          setSmall('w-[20%] gap-50')
+          setSmall('w-[40%] gap-50')
         else 
-          setSmall('w-0  hidden')
+          setSmall('w-0 hidden')
 
         e.preventDefault()
       }
 
     return (
-      <div className="w-full h-40 max-w-full items-center justify-between flex">
-        <div className="md:text-lg lg:text-lg sm:text-sm font-mono text-slate-400 w-[20%]">
+      <div className="w-full h-80 max-w-full items-center justify-between flex bg-red">
+        <div className="md:text-lg lg:text-lg sm:text-sm font-mono text-slate-400 w-[20%] sm:align-middle bg-black h-5/5">
           <div className="md:hidden lg:hidden block text-2xl" >TDWC</div>
           <div className="hidden md:block lg:block">Texas dev web creative</div>
         </div>
-        <ul className={`md:flex lg:flex md:w-[30%] lg:w-[30%] justify-between items-center  ${small} sm:flex-col md:flex-row`}>
+        <ul className={`bg-[#f7f7f72e] h-[100%] align-middle justify-between rounded-lg items-center md:relative p-4 md:flex-row md:w-[30%] md:flex ${small} sm:flex-col sm:absolute`}>
           <ItemNav description='hero' href='#' icon={faHouse} />
           <ItemNav description='about' href='#' icon ={faBook}/>
           <ItemNav description='Services' href='#' icon={faBuilding} />
@@ -57,7 +57,7 @@ function ItemNav(request: IItemNavRequest) {
 
   return (
       <li className='list-none flex'>
-          <a className='text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4' href={href} >
+          <a className='flex p-5 text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4' href={href} >
             <i>
               <FontAwesomeIcon icon={icon} className='h-4'/> {description}
             </i>
