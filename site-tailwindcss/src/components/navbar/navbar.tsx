@@ -24,12 +24,12 @@ export default function Navbar() {
       }
 
     return (
-      <div className="w-full h-80 max-w-full items-center justify-between flex bg-red">
+      <div className="w-full h-36 max-w-full items-center justify-between flex">
         <div className="md:text-lg lg:text-lg sm:text-sm font-mono text-slate-400 w-[20%] sm:align-middle bg-black h-5/5">
           <div className="md:hidden lg:hidden block text-2xl" >TDWC</div>
           <div className="hidden md:block lg:block">Texas dev web creative</div>
         </div>
-        <ul className={`bg-[#f7f7f72e] h-[100%] align-middle justify-between rounded-lg items-center md:relative p-4 md:flex-row md:w-[30%] md:flex ${small} sm:flex-col sm:absolute`}>
+        <ul className={`bg-[#f7f7f72e] h-[100%] align-middle justify-between rounded-lg items-center mt-20 md:relative p-4 md:flex-row md:w-[30%] md:flex ${small} sm:flex-col sm:absolute`}>
           <ItemNav description='hero' href='#' icon={faHouse} />
           <ItemNav description='about' href='#' icon ={faBook}/>
           <ItemNav description='Services' href='#' icon={faBuilding} />
@@ -57,7 +57,7 @@ function ItemNav(request: IItemNavRequest) {
 
   return (
       <li className='list-none flex'>
-          <a className='flex p-5 text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4' href={href} >
+          <a className='flex p-5 text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0' href={href} >
             <i>
               <FontAwesomeIcon icon={icon} className='h-4'/> {description}
             </i>
