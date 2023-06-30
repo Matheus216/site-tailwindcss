@@ -24,24 +24,21 @@ export default function Navbar() {
       }
 
     return (
-      <div className="w-full h-36 max-w-full items-center justify-between flex">
-        <div className="md:text-lg lg:text-lg sm:text-sm font-mono text-slate-400 w-[20%] sm:align-middle bg-black h-5/5">
-          <div className="md:hidden lg:hidden block text-2xl" >TDWC</div>
-          <div className="hidden md:block lg:block">Texas dev web creative</div>
-        </div>
-        <ul className={`bg-[#f7f7f72e] h-[100%] align-middle justify-between rounded-lg items-center mt-20 md:relative p-4 md:flex-row md:w-[30%] md:flex ${small} sm:flex-col sm:absolute`}>
-          <ItemNav description='hero' href='#' icon={faHouse} />
-          <ItemNav description='about' href='#' icon ={faBook}/>
-          <ItemNav description='Services' href='#' icon={faBuilding} />
-          <ItemNav description='Contact' href='#' icon={faPhone} />
-        </ul>
-        <div className='w-[20%] text-slate-300 text-center'>
+        <div className="w-full h-16  items-center justify-between flex ">
+          <div className="md:text-lg font-mono text-slate-400">
+            <a className="hover:text-orange-500 cursor-pointer font-bold text-[1.5rem]">Texas dev web creative</a>
+          </div>
+          <ul className={`flex gap-8`}>
+            <ItemNav description='hero' href='#' icon={faHouse} />
+            <ItemNav description='about' href='#' icon ={faBook}/>
+            <ItemNav description='Services' href='#' icon={faBuilding} />
+            <ItemNav description='Contact' href='#' icon={faPhone} />
+          </ul>
           <button className='transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-orange-800 duration-300 bg-orange-500 text-white font-bold rounded p-3 cursor-pointer hidden md:block lg:block'>
             Get started
           </button>
           <i className=' md:hidden lg:hidden'><a href='#' onClick={e => expandNavbar(e)}><FontAwesomeIcon className='h-6' icon={faBars} /></a></i>
         </div>
-      </div>
     )
   }
 
