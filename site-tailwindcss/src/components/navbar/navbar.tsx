@@ -69,7 +69,7 @@ export default function Navbar() {
 function DropdownResponsive({resp}:any) { 
   const liStyle = 'flex p-[0.7rem] items-center justify-center'
   return (
-    <div className={`${resp} sm:left-[2rem]  w-[unset] md:w-0 lg:w-0 transition-[height] delay-[0.2s] md:h-0 lg:h-0 absolute right-8 top-16  bg-[#9ca3af4d] backdrop-blur-[5px] rounded-[10px] overflow-hidden`}>
+    <div className={`${resp}  right-[0] left-[3rem]  w-[80%] md:w-0 lg:w-0 transition-[height] delay-[0.2s] md:h-0 lg:h-0 absolute  top-16  bg-[#9ca3af4d] backdrop-blur-[5px] rounded-[10px] overflow-hidden`}>
       <ItemNav liStyle={liStyle} linkStyle={'text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0'} description='hero' href='#' icon={faHouse} />
       <ItemNav liStyle={liStyle} linkStyle={'text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0'}description='about' href='#' icon ={faBook}/>
       <ItemNav liStyle={liStyle} linkStyle={'text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0'} description='Services' href='#' icon={faBuilding} />
