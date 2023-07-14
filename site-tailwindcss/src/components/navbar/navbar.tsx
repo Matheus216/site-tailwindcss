@@ -50,7 +50,7 @@ export default function Navbar() {
           {
             isSmallScreen ? <DropdownResponsive resp={small} /> :
             (
-              <ul className={`flex gap-7 sm:hidden md:flex lg:flex`}>
+              <ul className={`flex gap-7 sm:hidden md:flex lg:flex me-[100px]`}>
                 <ItemNav liStyle={'flex'} linkStyle={'flex p-5 text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0'}description='hero' href='#' icon={faHouse} />
                 <ItemNav liStyle={'flex'} linkStyle={'flex p-5 text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0'}description='about' href='#' icon ={faBook}/>
                 <ItemNav liStyle={'flex'} linkStyle={'flex p-5 text-slate-300 hover:text-orange-500 transition-colors delay-150 h-4 md:pt-0'}description='Services' href='#' icon={faBuilding} />
